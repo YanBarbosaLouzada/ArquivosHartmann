@@ -1,0 +1,48 @@
+/* ==========================================================
+   PÁGINA DO CHAT (classes começam com "cp-")
+   Lista de canais à esquerda, chat à direita.
+   ========================================================== */
+
+.cp-root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 20px;
+  min-height: calc(100vh - 52px); /* descontando a barra de navegação */
+  box-sizing: border-box;
+  background: #241811;
+}
+
+.cp-principal {
+  flex: 1;
+  min-width: 0;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cp-erro {
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  background: rgba(163, 57, 47, 0.25);
+  border-left: 3px solid #a3392f;
+  color: #e7a79f;
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 0.8rem;
+}
+
+.cp-vazio {
+  margin: 3rem auto;
+  color: #8a7554;
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+/* No celular a lista de canais fica em cima do chat */
+@media (max-width: 760px) {
+  .cp-root { flex-direction: column; align-items: stretch; padding: 12px; }
+  .cp-principal { max-width: none; }
+}

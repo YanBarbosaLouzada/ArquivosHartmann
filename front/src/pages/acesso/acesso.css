@@ -1,0 +1,110 @@
+/* Reaproveita as variáveis e classes de home.css (.ah-root, .ah-section...) */
+
+.ag-header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.ag-title {
+  font-family: 'Nosifer', cursive;
+  font-weight: normal;
+  color: #f4efe4;
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  margin: 1rem 0 0.5rem;
+  text-shadow: 0 0 14px rgba(255,255,255,0.18), 0 3px 0 rgba(0,0,0,0.6);
+}
+
+.ag-link {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--ink-faint);
+}
+
+.ag-link:hover { color: var(--ink); }
+
+.ag-alert {
+  background: var(--bg-paper);
+  border-left: 3px solid #c9a13f;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+}
+
+.ag-alert--erro { border-left-color: #a3392f; color: #e7a79f; }
+
+.ag-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .ag-form { grid-template-columns: 1fr; }
+}
+
+.ag-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+}
+
+.ag-form input,
+.ag-form select {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: #1c130c;
+  border: 1px solid rgba(233, 220, 194, 0.2);
+  padding: 0.55rem 0.7rem;
+  min-width: 0;
+}
+
+.ag-form input:focus,
+.ag-form select:focus {
+  outline: none;
+  border-color: #c9a13f;
+}
+
+.ag-form input[readonly] { color: var(--ink-faint); }
+
+.ag-form__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.ag-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--black);
+  background: #c9a13f;
+  border: 1px solid rgba(0,0,0,0.4);
+  padding: 0.55rem 1.1rem;
+}
+
+.ag-btn:hover { filter: brightness(1.1); }
+
+.ag-btn--ghost {
+  background: transparent;
+  color: var(--ink-dim);
+  border-color: var(--ink-faint);
+}
+
+.ag-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.ag-acesso { max-width: 620px; }
+
+.ag-form--simples { grid-template-columns: 1fr; }
+
+.ag-troca {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--ink-dim);
+}
